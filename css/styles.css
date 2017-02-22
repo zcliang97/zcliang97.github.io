@@ -1,0 +1,143 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+p {
+	padding: 20px;
+	border: 2px solid black; 
+}
+
+.work-experience-title {
+	font-size: 20px;
+}
+
+.img-circle {
+	border-radius:50%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(142, 142, 214);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* LAYOUT CSS */
+#side_styling {
+    padding-left: 20%;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    margin-left: -25%;
+    background: rgb(22, 35, 60);
+    color: #fff;
+}
+
+.header {
+    margin: 50% 2em 0;
+    text-align: right;
+}
+
+.main-title,
+.main-subtitle {
+    margin: 0;
+}
+.main-title {
+    text-transform: uppercase;
+}
+.main-subtitle {
+    font-weight: 300;
+    color: rgb(142, 142, 214);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 3px solid rgb(103, 103, 180);
+    color: #fff;
+    margin-top: 1em;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 3px solid rgb(142, 142, 214);
+    color: rgb(142, 142, 214);
+    text-decoration: none;
+}
+.body_content {
+    padding: 2em 3em 0;
+}
+
+.body-subheading {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.entries{
+	
+}
+
+.entry {
+}
+.entry-title {
+    font-size: 2em;
+    color: #222;
+}
+.entry-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.entry-description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+}
+
+@media (max-width: 760px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .header {
+        text-align: center;
+        top: auto;
+        margin: 3em auto;
+        position: static;
+    }
+
+    #side_styling {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .body_content {
+        padding: 2em 1em 0;
+    }
+}
