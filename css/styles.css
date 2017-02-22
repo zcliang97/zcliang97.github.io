@@ -20,7 +20,7 @@ p {
 
 a {
     text-decoration: none;
-    color: rgb(142, 142, 214);
+    color: rgb(25, 210, 215);
 }
 a:hover,
 a:focus {
@@ -39,7 +39,7 @@ a:focus {
     bottom: 0;
     width: 25%;
     margin-left: -25%;
-    background: rgb(22, 35, 60);
+    background: rgb(20, 50, 80);
     color: #fff;
 }
 
@@ -57,7 +57,7 @@ a:focus {
 }
 .main-subtitle {
     font-weight: 300;
-    color: rgb(142, 142, 214);
+    color: rgb(25, 210, 215);
 }
 
 .nav-list {
@@ -78,8 +78,8 @@ a:focus {
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 3px solid rgb(142, 142, 214);
-    color: rgb(142, 142, 214);
+    border: 3px solid rgb(25, 210, 215);
+    color: rgb(25, 210, 215);
     text-decoration: none;
 }
 .body_content {
