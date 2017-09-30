@@ -148,7 +148,6 @@ function nextRole(){
 function startQuests(){
 	currMission = 0;
 	
-	document.getElementById("game_image").style.display = "block";
 	document.getElementById("main_image").src = "Images/quest_mission.jpg";
 	document.getElementById("main_image").height = "360";
 	document.getElementById("main_image").width = "640";
