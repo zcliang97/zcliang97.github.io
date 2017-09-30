@@ -61,7 +61,7 @@ function updateTooltip(title, description, imgSrc){
     document.getElementById("tooltip-title").innerHTML = title;
     if(description != null){
         toggleHTMLDisplay("tooltip-description", "block");
-        document.getElementById("tooltip-description").innerHTML = description;
+        document.getElementById("tooltip-description").innerHTML = `${description}`;
     } else {
         toggleHTMLDisplay("tooltip-description", "none");
     }
