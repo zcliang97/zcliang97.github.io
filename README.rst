@@ -1,4 +1,4 @@
 Frank's Website
 ==========================
 
-Designed in HTML and CSS
+Designed in HTML/ CSS/ Javascript
