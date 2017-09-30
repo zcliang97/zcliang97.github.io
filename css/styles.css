@@ -21,6 +21,7 @@ p {
 a {
     text-decoration: none;
     color: rgb(25, 210, 215);
+    outline:none !important;
 }
 a:hover,
 a:focus {
@@ -41,6 +42,7 @@ a:focus {
     margin-left: -25%;
     background: rgb(20, 50, 80);
     color: #fff;
+    padding-left: 10px;
 }
 
 .header {
@@ -101,6 +103,7 @@ a:focus {
 }
 
 .entry {
+    
 }
 .entry-title {
     font-size: 2em;
@@ -115,6 +118,27 @@ a:focus {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
+}
+
+.project-img {
+    height: 200px;
+    width: 150px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.project-img-padding {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    outline-style: none;
+}
+
+.project-img:hover{
+    box-shadow: 3px 10px 5px lightslategray;
+    position: relative;
+    top: -10px;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 @media (max-width: 760px) {
@@ -140,4 +164,18 @@ a:focus {
     .body_content {
         padding: 2em 1em 0;
     }
+}
+
+/* Tooltip Projects */
+.tooltip {
+    width:300px;
+    position:absolute;
+    display:none;
+    z-index:1000;
+    background-color:#E9EEF0;
+    color:black;
+    border: 1px solid #170E29;
+    padding:15px 20px;
+    box-shadow: 0px 3px 2px #8D8D8D;
+    border-radius: 6px;
 }
