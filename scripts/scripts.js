@@ -1,7 +1,8 @@
 //================================ GLOBAL FUNCTIONS ================================
 const projects = {
     avalon: ["Avalon Web", "A web version of the classic board game Avalon. Click to play the game!", null],
-    tradeq: ["TradeQ", "A mock stock simulator. Still in progress. Click to check out where it's at now!", null],
+    task: ["Task Manager", "<b>STILL UPDATING</b><br> A task manager created with MEAN stack. Click to see where it's at now!", null],
+    tradeq: ["TradeQ", "<b>IN PROGRESS</b><br> A mock stock simulator. Still in progress. Click to check out where it's at now!", null],
     gpsnav: ["GPS Navigator", "An android app for GPS navigation based on sensors in the phone. Click to check it out!", null],
 };
 
@@ -80,9 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
         togProjects(projects, "tradeq");});
     document.getElementById("proj-gps").addEventListener("mouseover", function (){
         togProjects(projects, "gpsnav");});
+        document.getElementById("proj-task").addEventListener("mouseover", function (){
+            togProjects(projects, "task");});
     document.getElementById("proj-avalon").addEventListener("mouseout", togStop);
     document.getElementById("proj-tradeq").addEventListener("mouseout", togStop);
     document.getElementById("proj-gps").addEventListener("mouseout", togStop);
+    document.getElementById("proj-task").addEventListener("mouseout", togStop);
     
 	document.getElementById("work-nexj").addEventListener("mouseover", function (){
         togProjects(works, "nexj");});
