@@ -38,16 +38,15 @@ a:focus {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 25%;
-    margin-left: -25%;
+    width: 20%;
+    margin-left: -20%;
     background: rgb(20, 50, 80);
     color: #fff;
-    padding-left: 10px;
 }
 
 .header {
-    margin: 50% 2em 0;
-    text-align: right;
+    margin: 30% 2em 0;
+    text-align: left;
 }
 
 .main-title,
@@ -56,10 +55,12 @@ a:focus {
 }
 .main-title {
     text-transform: uppercase;
+    font-size: 180%;
 }
 .main-subtitle {
     font-weight: 300;
     color: rgb(25, 210, 215);
+    font-size: 120%;
 }
 
 .nav-list {
