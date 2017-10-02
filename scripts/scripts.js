@@ -12,8 +12,21 @@ const works = {
     pavac: ["Pavac Industries", null, "images/pavac.png"],
 };
 
+const activities = {
+    lss: ["LifeSaving Society", "I'm certified and worked as a lifeguard in the local community pool. The certification required passing 8 courses in water safety and first aid protocols. I was also a swimming instructor in charge of 8-12 students per class.", null],
+    muaythai: ["Muay Thai", "I'm a member of the Muay Thai Club. There are weekly meetings to practice and celebrate the art of Muay Thai.", null],
+    badmintonclub: ["Badminton Club", "There are weekly sessions for casual or competitive play. Every term there are competitions for both singles and doubles.", null],
+    swimming: ["Swimming", "I have been swimming for 9 years. I am certified as a lifeguard and a first aid responder to all water emergencies", null],
+    piano: ["Piano", "I am level 8 in piano and in 2012. I won two awards for 2nd and 3rd place in competitions", null],
+    art: ["Art/Drawing", "I have been taking lessons for 7 years. In 2013, I won 1st place in the Vancouver regional Remembrance Day Poster Contest hosted by the Royal Canadian Legion.", null],
+    //tennis: ["Tennis", "I enjoy playing tennis in my leisure time.", null],
+    //pingpong: ["Ping Pong", null, null],
+    //foosball: ["Foosball", null, null],
+};
+
 let isEnableTooltip = false;
 
+let currDocument = document.URL.split('/').pop();
 //================================ MAIN FUNCTIONS ================================
 function togProjects(set, entry){
     isEnableTooltip = true;
@@ -75,26 +88,49 @@ function updateTooltip(title, description, imgSrc){
 
 //================================ INITIALIZE EVENT LISTENERS ================================
 document.addEventListener("DOMContentLoaded", function () {
-	document.getElementById("proj-avalon").addEventListener("mouseover", function (){
-        togProjects(projects, "avalon");});
-    document.getElementById("proj-tradeq").addEventListener("mouseover", function (){
-        togProjects(projects, "tradeq");});
-    document.getElementById("proj-gps").addEventListener("mouseover", function (){
-        togProjects(projects, "gpsnav");});
-        document.getElementById("proj-task").addEventListener("mouseover", function (){
-            togProjects(projects, "task");});
-    document.getElementById("proj-avalon").addEventListener("mouseout", togStop);
-    document.getElementById("proj-tradeq").addEventListener("mouseout", togStop);
-    document.getElementById("proj-gps").addEventListener("mouseout", togStop);
-    document.getElementById("proj-task").addEventListener("mouseout", togStop);
-    
-	document.getElementById("work-nexj").addEventListener("mouseover", function (){
-        togProjects(works, "nexj");});
-    document.getElementById("work-kpmg").addEventListener("mouseover", function (){
-        togProjects(works, "kpmg");});
-    document.getElementById("work-pavac").addEventListener("mouseover", function (){
-        togProjects(works, "pavac");});
-    document.getElementById("work-nexj").addEventListener("mouseout", togStop);
-    document.getElementById("work-kpmg").addEventListener("mouseout", togStop);
-    document.getElementById("work-pavac").addEventListener("mouseout", togStop);
+    if(currDocument == "projects.html"){
+        document.getElementById("proj-avalon").addEventListener("mouseover", function (){
+            togProjects(projects, "avalon");});
+        document.getElementById("proj-tradeq").addEventListener("mouseover", function (){
+            togProjects(projects, "tradeq");});
+        document.getElementById("proj-gps").addEventListener("mouseover", function (){
+            togProjects(projects, "gpsnav");});
+            document.getElementById("proj-task").addEventListener("mouseover", function (){
+                togProjects(projects, "task");});
+        document.getElementById("proj-avalon").addEventListener("mouseout", togStop);
+        document.getElementById("proj-tradeq").addEventListener("mouseout", togStop);
+        document.getElementById("proj-gps").addEventListener("mouseout", togStop);
+        document.getElementById("proj-task").addEventListener("mouseout", togStop);
+    }
+    else if(currDocument == "works.html"){
+        document.getElementById("work-nexj").addEventListener("mouseover", function (){
+            togProjects(works, "nexj");});
+        document.getElementById("work-kpmg").addEventListener("mouseover", function (){
+            togProjects(works, "kpmg");});
+        document.getElementById("work-pavac").addEventListener("mouseover", function (){
+            togProjects(works, "pavac");});
+        document.getElementById("work-nexj").addEventListener("mouseout", togStop);
+        document.getElementById("work-kpmg").addEventListener("mouseout", togStop);
+        document.getElementById("work-pavac").addEventListener("mouseout", togStop);    
+    }
+    else if(currDocument == "about.html"){
+        document.getElementById("act-lss").addEventListener("mouseover", function (){
+            togProjects(activities, "lss");});
+        document.getElementById("act-muaythai").addEventListener("mouseover", function (){
+            togProjects(activities, "muaythai");});
+        document.getElementById("act-badmintonclub").addEventListener("mouseover", function (){
+            togProjects(activities, "badmintonclub");});
+        document.getElementById("act-swimming").addEventListener("mouseover", function (){
+            togProjects(activities, "swimming");});
+        document.getElementById("act-piano").addEventListener("mouseover", function (){
+            togProjects(activities, "piano");});
+        document.getElementById("act-art").addEventListener("mouseover", function (){
+            togProjects(activities, "art");});
+        document.getElementById("act-lss").addEventListener("mouseout", togStop);
+        document.getElementById("act-muaythai").addEventListener("mouseout", togStop);
+        document.getElementById("act-badmintonclub").addEventListener("mouseout", togStop);
+        document.getElementById("act-swimming").addEventListener("mouseout", togStop);
+        document.getElementById("act-piano").addEventListener("mouseout", togStop);
+        document.getElementById("act-art").addEventListener("mouseout", togStop);   
+    }
 });

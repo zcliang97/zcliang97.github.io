@@ -10,6 +10,11 @@ p {
 	border: 2px solid black; 
 }
 
+.border {
+    padding: 20px;
+    border: 2px solid black; 
+}
+
 .work-experience-title {
 	font-size: 20px;
 }
@@ -36,16 +41,16 @@ a:focus {
 
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 0px;
     bottom: 0;
-    width: 20%;
+    width: 250px;
     margin-left: -20%;
     background: rgb(20, 50, 80);
     color: #fff;
 }
 
 .header {
-    margin: 30% 2em 0;
+    margin: 50% 2em 0;
     text-align: left;
 }
 
@@ -149,11 +154,19 @@ a:focus {
         margin: 0;
     }
 
+    .navbar-resize{
+        left: 0px;
+    }
+
     .header {
         text-align: center;
         top: auto;
         margin: 3em auto;
         position: static;
+    }
+
+    nav {
+        left: 0px;
     }
 
     #side_styling {
@@ -180,3 +193,85 @@ a:focus {
     box-shadow: 0px 3px 2px #8D8D8D;
     border-radius: 6px;
 }
+
+/* Navigator */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.navbar-resize {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: black;
+}
+
+.clubs-img {
+    height: 800px;
+    width: 500px;
+}
+
+/* Rows and Columns */
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 2 Columns */
+.col-left {
+    width: 40%;
+}
+
+.col-right {
+    width: 60%;
+    padding-left: 10%;
+}
+
+/* 3 Columns */
+
+.col-1 {
+    width: 30%;
+    padding-left:5%;
+}
+
+.col-2 {
+    width: 30%;
+    padding-left:5%;
+}
+
+.col-3{
+    width: 30%;
+    padding-left:5%;
+}
+
+.initial {
+    all: initial;
+}
+
