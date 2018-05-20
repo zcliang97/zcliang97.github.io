@@ -1,5 +1,6 @@
 //================================ GLOBAL FUNCTIONS ================================
 const projects = {
+    stock: ["Stock Visualizer", "Created a stock visualization using ReactJS, PlotlyJS, and bootstrap that renders stock data in real-time and highlights significant trends", null],
     avalon: ["Avalon Web", "A web version of the classic board game Avalon. Click to play the game!", null],
     task: ["Task Manager", "<b>STILL UPDATING</b><br> A task manager created with MEAN stack. Click to see where it's at now!", null],
     tradeq: ["TradeQ", "<b>IN PROGRESS</b><br> A mock stock simulator. Still in progress. Click to check out where it's at now!", null],
@@ -7,6 +8,7 @@ const projects = {
 };
 
 const works = {
+    ibm: ["IBM QRadar Security Intelligence", null, "images/ibm.png"],
     nexj: ["NexJ Systems Inc.", null, "images/nexj.png"],
     kpmg: ["KPMG LLP", null, "images/KPMG.png"],
     pavac: ["Pavac Industries", null, "images/pavac.png"],
@@ -89,6 +91,8 @@ function updateTooltip(title, description, imgSrc){
 //================================ INITIALIZE EVENT LISTENERS ================================
 document.addEventListener("DOMContentLoaded", function () {
     if(currDocument == "projects.html"){
+        document.getElementById("proj-stock").addEventListener("mouseover", function (){
+            togProjects(projects, "stock");});
         document.getElementById("proj-avalon").addEventListener("mouseover", function (){
             togProjects(projects, "avalon");});
         document.getElementById("proj-tradeq").addEventListener("mouseover", function (){
@@ -97,18 +101,22 @@ document.addEventListener("DOMContentLoaded", function () {
             togProjects(projects, "gpsnav");});
             document.getElementById("proj-task").addEventListener("mouseover", function (){
                 togProjects(projects, "task");});
+        document.getElementById("proj-stock").addEventListener("mouseout", togStop);
         document.getElementById("proj-avalon").addEventListener("mouseout", togStop);
         document.getElementById("proj-tradeq").addEventListener("mouseout", togStop);
         document.getElementById("proj-gps").addEventListener("mouseout", togStop);
         document.getElementById("proj-task").addEventListener("mouseout", togStop);
     }
     else if(currDocument == "works.html"){
+        document.getElementById("work-ibm").addEventListener("mouseover", function (){
+            togProjects(works, "ibm");});
         document.getElementById("work-nexj").addEventListener("mouseover", function (){
             togProjects(works, "nexj");});
         document.getElementById("work-kpmg").addEventListener("mouseover", function (){
             togProjects(works, "kpmg");});
         document.getElementById("work-pavac").addEventListener("mouseover", function (){
             togProjects(works, "pavac");});
+        document.getElementById("work-ibm").addEventListener("mouseout", togStop);
         document.getElementById("work-nexj").addEventListener("mouseout", togStop);
         document.getElementById("work-kpmg").addEventListener("mouseout", togStop);
         document.getElementById("work-pavac").addEventListener("mouseout", togStop);    
